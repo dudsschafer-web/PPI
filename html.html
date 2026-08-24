@@ -5,6 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Linguagem HTML</title>
         <style>  /** Código CSS */
+
         h1{ color:rgb(221, 75, 160)}
         span{font-size: 1.em;}
         section{
@@ -13,15 +14,16 @@
         border-top-width: 0.5em;
         
         border-top: 0.5px dotted pink} 
-        div{
-            background-color: rgba(218, 220, 236, 0.897);
+
+        div {
+            background-color: #88AABB;
         }
 
-        table, td, caption, th{
+         table#sepei, #sepei td, #sepei th {
             border: 1px solid black;
             border-collapse: collapse;
-            background-color: rgba(200, 100, 50, 0.1);
-        }
+            background-color: blanchedalmond;
+         }
 
   
     </style>
@@ -127,16 +129,62 @@
                     </tr>
                 </table>
 
-                <table>
+                <table id="sepei">
                     <caption>SEPEI 2026</caption>
-                    <tr><th>indice</th><th>nome</th></tr>
-                    <tr><td>1</td><td>Joana</td><td>18</td></tr> 
-                    <tr><td>1</td><td>Maria</td><td>17</td></tr> 
-                    <tr><td>1</td><td>Heloisa</td><td>18</td></tr> 
-                    <tr><td>1</td><td>Kiara</td><td>17</td></tr> 
-                    <tr><td>1</td><td>Oliver</td><td>18</td></tr> 
-                    <tr><td colspan="2">Total alunos</td><td>5</td></tr>
+                    <tr>
+                        <th>indice</th>
+                        <th>nome</th>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>Joana</td>
+                        <td>18</td>
+                    </tr> 
+                    <tr>
+                        <td>1</td>
+                        <td>Maria</td>
+                        <td>17</td>
+                    </tr> 
+                    <tr>
+                        <td>1</td>
+                        <td>Heloísa</td>
+                        <td>18</td>
+                    </tr> 
+                    <tr>
+                        <td>1</td>
+                        <td>Kiara</td>
+                        <td>17</td>
+                    </tr> 
+                    <tr>
+                        <td>1</td>
+                        <td>Oliver</td>
+                        <td>18</td>
+                    </tr> 
+                    <tr>
+                        <td colspan="2">Total alunos</td>
+                        <td>5</td>
+                    </tr>
                 </table>
+            </section> 
+
+            <section>
+                <h1>Formulário</h1>
+                <p>As tags de formulário permitem entrada de dados</p>
+
+                <form action="">
+                    <br> <label for="inputnome">Nome:</label>
+                    <input id="inputnome" type="text"> <br>
+
+                    <br> <label for="inputTelefone">Telefone:</label>
+                    <input id="inputTelefone"  type="tel" pattern="^\(\d(2)\)\s\d(4,5)-\d(4)$"> 
+                    <input type="submit" value="Enviar ">
+                </form>
+
+                <form action="https://google.com/search" method="get">
+
+                    <input type="text" name="q">
+                    <input type="submit">
+                </form>
             </section>
         </body>
     </html>
