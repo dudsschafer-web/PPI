@@ -1,217 +1,198 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
+    <head> 
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Linguagem HTML</title>
-        <style>  /** Código CSS */
+        <style> 
+        /*definir css
+        você pode definir o css pela tag <style> mas tambem colocando <link para um documento css
+        você pode também definir com o css in line, dentro de outra tag, 
+            ex: <p style = "regra css" > parágrafo </p>*/
+        *{background-color: honeydew;}
 
-        h1{ color:rgb(221, 75, 160)}
-        span{font-size: 1.em;}
-        section{
-        border-top-color: black;
-        border-top-style: double;
-        border-top-width: 0.5em;
-        
-        border-top: 0.5px dotted pink} 
+        h1{color:rgb(255, 146, 4);
+            font-size: 10em;}
 
-        div {
-            background-color: #88AABB;
-        }
+        span{font-size: 1.5em;}
 
-         table#sepei, #sepei td, #sepei th {
+        section{border: 2px dotted rgb(255, 119, 7);}
+
+        a{color:rgb(252, 147, 48); }
+
+        div{ background-color: rgb(247, 219, 177);}
+
+        mark{color: rgba(201, 126, 252, 0.829);}
+
+        table#sepei, #sepei td, #sepei th, #sepei caption{
             border: 1px solid black;
             border-collapse: collapse;
-            background-color: blanchedalmond;
-         }
+            background-color: rgb(248, 248, 216);
+        }
 
-  
+         table#churrasco, #churrasco td, #churrasco th, #churrasco caption{
+            border: 1px solid black;
+            border-collapse: collapse;
+            background-color: rgb(248, 248, 216);
+        }
+
+        .textonormal{
+            background-color: crimson;
+            -webkit-text-fill-color: burlywood;
+        }
+        
+
     </style>
     </head>
     <body>
+        <h1 draggable="true"><strong>HTML</strong></h1>
+        <p style="font-size: 3em;">HTML é uma linguagem de marcação criada por
+            <a href="https://pt.wikipedia.org/wiki/Tim_Berners-Lee">
+                <strong>Tim Bernes Lee</strong> <i>(1990)</i>
+            </a>
+        </p>
+        <img src="./imagens/Sir_Tim_Berners-Lee.jpg" alt="Sir Tim Berners-Lee">
         <div draggable="true">
-            <h1> Origem do HTML</h1>
-            <p> linguagem de marcação criada por <a
-                    href="https://pt.wikipedia.org/wiki/Tim_Berners-Lee ">
-                    <strong>Tim Bernes Lee (1990)</strong> </a> para
-                compartilhamentio de documentos no CERN
-
-            </p>
-            <img src="./img/imagemERN.jpg" alt>
-        </div>
-        <hr>
-
-        <section>
-            <h2>Arquitetura Clinte servidor da WEB</h2>
-            <p>As tecnlogias fundamentais que compoem a WEB são:
+            <hr>
+            <section>
+                <h2>Arquietura Cliente servidor WEB</h2>
+                <p>As tecnologia que fundamentais que compoem a WEB são:</p>
                 <ul>
-
-                    <li>Arquitetura Cliente servidor</li>
-                    <li>HTTP - Hyper Text Tranfer Protocol </li>
-                    <li>HTML - <em> Hyper Text Markup Language</em> <del> é uma
-                            linguagem de programação</del> <sub>nota1</sub></li>
-
-                    <li>Naegador Cliente</li>
+                    <li>Arquitetura Cliente Servidor</li>
+                    <li>HTTP - Hyper Text Transfer Protocol</li>
+                    <li>HTML - Hyper Text Markup Language</li>
+                    <li>Navegaor Cliente - </li>
                     <li>Servidor Web</li>
                 </ul>
-                <img src="./img/clienteSer.jpg" alt>
+                <img src="./imagens/clienteServidor.jpg"
+                    alt="Sir Tim Berners-Lee">
 
-                <br>
-                Ao longo dos anos a web evoluiu e nova tecnlogias foram
-                incorporadas como <span>CSS</span> e JavaScript
-            </p>
-            <p>a=ax+bx <sup>2</sup>+C</p>
-        </section>
+            </section>
 
-        <section id="listas">
-            <p> O HTML possui listas não ordenadas, ordenadas e detalhadas com
-                as tags ul, ol e dl</p>
+            <p>Ao longo dos anos, foram a web evoluiu e novas tecnologias
+                foram incorporadas como <span><mark>CSS</mark></span> e
+                <span><mark>JavaScript</mark></span></p>
+            <p><del>HTML é uma linguagem de programação.</del></p>
+            <p>a=ax+bx<sup>2</sup> +c</p>
 
-            <p>Lista não ordenada</p>
-            <ul>
-                <li>pera</li>
-                <li>uva</li>
-                <li>maça</li>
-            </ul>
-            <p>Lista ordenada</p>
+            <section id="listas">
+                <p>O HTML possui listas não ordenadas, ordenadas e detalhadas,
+                    criadas com tags: <span>ul ol dl </span> </p>
+                <p class="textonormal">Lista não ordenada</p>
+                <ul>
+                    <li>Pera</li>
+                    <li>Uva</li>
+                    <li>Maçã</li>
+                </ul>
+                <p class="textonormal">Lista ordenada</p>
+                <ol type="1" start="1">
+                    <li>Pera</li>
+                    <li>Uva</li>
+                    <li>Maçã</li>
+                </ol>
+                <p class="textonormal">Lista ordenada</p>
+                <dl>
+                    <dt>Leite</dt>
+                    <dd>Bebida nutridica extraída de mamíferos.</dd>
+                    <dt>Café</dt>
+                    <dd>Bebida obtida com a torra e fervura de grão de café,
+                        essencial para a vida.</dd>
+                </dl>
+            </section>
+            <section id="tabelas">
+                <p>O HTML fornece suporte a tabelas por meio a tag table, como
+                    tag definição de linha &gt <i> table row </i>, criação
+                    decelular com tag &gt <i> </i>table data </i>.
+                </p>
 
-            <ol type="I" start="10" reversed>
-                <li>pera</li>
-                <li>uva</li>
-                <li>macça</li>
-
-            </ol>
-
-            <p>Detalhadas</p>
-            <dl>
-                <dt>leite</dt>
-                <dd>bebida nutritiva extraída de mamiferos</dd>
-                <dt>café</dt>
-                <dd>bebida obtida com a torra de gão de café, essencial para a
-                    vida</dd>
-            </dl>
-
-        </section>
-        <section i="tabelas">
-            <p>
-                O HTML fornece suporte a tabelas por meio da tag table, e outras
-                tags, como tag definição de linha &lt tr &gt <i>table row</i>,
-                criação de celular com tag &lt td &gt <i>table data</i>
-            </p>
-
-            <table>
-                <caption>Churrasco finaleira</caption>
-                <tr>
-                    <td>indice</td><td>categoria</td><td>nome</td><td>valor</td>
-                </tr>
-                <tr>
-                    <td>1</td><td rowspan = "2">carnes</td><td>carne</td><td>50,00</td>
-                </tr>
-                <tr>
-                    <td>2</td><td>linguiça</td><td>50,00</td>
-                </tr>
-                <tr>
-                    <td>3</td><td>outros</td><td>carvão</td><td>30,00</td>
-                </tr>
-                <tr>
-                    <td>4</td><td rowspan = "2" >bebidas</td><td>água com  gás</td><td>30,00</td>
-                </tr>
-                <tr>
-                    <td>5</td><td>refrigerante</td><td>60,00</td>
-                </tr>
-                <tr>
-                    <td>6</td><td>industrializados</td><td>pão de alho</td><td>40,00</td>
-                </tr>
-                <tr>
+                <table id="churrasco">
+                    <caption>Churrasco finaleira</caption>
                     <tr>
-                        <td colspan="3" rowspan="1"> Total</td>
-                        <td>260,00</td>
+                        <td>indice</td>
+                        <td>categoria</td>
+                        <td>nome</td>
+                        <td>valor</td>
                     </tr>
-                </table>
-
-                <table id="sepei">
-                    <caption>SEPEI 2026</caption>
                     <tr>
-                        <th>indice</th>
+                        <td>1</td>
+                        <td>carnes</td><td>carne</td><td>50,00</td>
+                    </tr>
+                    <tr>
+                        <td>2</td><td>carnes</td><td>linguiça</td><td>50,00</td>
+                    </tr>
+                    <tr>
+                        <td>3</td><td>outros</td><td>carvão</td><td>30,00</td>
+                    </tr>
+                    <tr>
+                        <td>4</td><td>bebidas</td><td>Água com gás</td><td>30,00</td>
+                    </tr>
+                    <tr>
+                        <td>5</td><td>bebidas</td><td>Refrigerante</td><td>60,00</td>
+                    <tr>
+                    <tr>
+                        <td>6</td><td>outros</td><td>Pão de alho</td><td>40,00</td>
+                    <tr>
+                        <tr>
+                            <td colspan="3" rowspan="1">Total</td>
+                            <td>260,00</td>
+                        </tr>
+                    </tr>
+                    </table>
+
+                    <table id="sepei">
+                        <br>
+                        <caption>SEPEI 2026</caption>
+                         <!-- tr é a linha e td é a celula, th deixa a palavra em negrito-->
+                        <tr><th>indice</th>
                         <th>nome</th>
-                    </tr>
-                    <tr>
-                        <td>1</td>
-                        <td>Joana</td>
-                        <td>18</td>
-                    </tr> 
-                    <tr>
-                        <td>1</td>
-                        <td>Maria</td>
-                        <td>17</td>
-                    </tr> 
-                    <tr>
-                        <td>1</td>
-                        <td>Heloísa</td>
-                        <td>18</td>
-                    </tr> 
-                    <tr>
-                        <td>1</td>
-                        <td>Kiara</td>
-                        <td>17</td>
-                    </tr> 
-                    <tr>
-                        <td>1</td>
-                        <td>Oliver</td>
-                        <td>18</td>
-                    </tr> 
-                    <tr>
-                        <td colspan="2">Total alunos</td>
-                        <td>5</td>
-                    </tr>
-                </table>
-            </section> 
+                        <th>idade</th></tr>
+                        
+                        <tr><td>1</td><td>Joana</td><td>18</td></tr> 
+                        <tr><td>2</td><td>Oliver</td><td>18</td></tr> 
+                        <tr><td>3</td><td>Kiara</td><td>17</td></tr> 
+                        <tr><td>4</td><td>Heloisa</td><td>18</td></tr>
+                        <tr><td>5</td><td>Maria Eduarda</td><td>17</td></tr>
+                        <tr><td colspan = "2">Total aluno</td> <td>5</td></tr>
 
-            <section>
-                <h1>Formulário</h1>
-                <p>As tags de formulário permitem entrada de dados</p>
+                    </table>
+                </section>
+                
+                <section>
+                    <h2>formulário</h2>
+                    <p>As tags de formulário permitem entrada de dados</p>
+                    <form action="">
+                        <label for="inputNome">Nome: </label>
+                        <input id="inputNome" type="text">
+                        <br>
+                        <label for="inputTelefone">Telefone: </label>
+                        <input id="inputTelefone" type="tel" pattrn = "^\(\d{2}\)\s\d{4,5}-\d{4}$">
+                        <br>
+                        <label for="inputSenha">Senha: </label>
+                        <input id="inputSenha" type="password">
+                        <br>
+                        <input type= "submit" value = "Enviar">
+                    </form>
 
-                <form action="">
-                    <br> <label for="inputnome">Nome:</label>
-                    <input id="inputnome" type="text"> <br>
+                    <form action="https://google.com/search" method="get">
 
-                    <br> <label for="inputTelefone">Telefone:</label>
-                    <input id="inputTelefone"  type="tel" pattern="^\(\d(2)\)\s\d(4,5)-\d(4)$">  <br>
-                    <input type="submit" value="Enviar "> 
-                </form>
+                        <input type="text" name="q">
+                        <input type="submit">
 
-                <form action="https://google.com/search" method="get">
+                    </form>
 
-                    <input type="text" name="q"> <br>
-                    <input type="submit"> 
+                    <form method="get">
 
-                </form>
-
-                <form method="post">
-
-                    <label for="usr">Usuário</label>
-                    <input id="usr" type="text" name="usuario"> <br>
+                    <label for="ur">Usuário</label>
+                    <input id="usr" type="text" name = "usuario">
 
                     <label for="senha">Senha</label>
-                    <input id="senha" type="password" name="senha"> <br>
+                    <input id="senha" type="password" name="senha">
 
                     <input type="submit">
 
-                    <!-- Formularios
-                     Enviada dados dos elementos
-                     input nelas contidos 
+                    </form>
 
-                     O tipo de input define a natureza do dado
-                     
-                     E o navegado muda a apresentação
-                     
-                     O atributo action define o destino da requirição
-                     
-                     O input type="submit"
-                     
-                     Tarefa (Não utilizamos int para cpf e telefone)-->
-
-                </form>
-            </section>
+                    
+            </div>
         </body>
     </html>

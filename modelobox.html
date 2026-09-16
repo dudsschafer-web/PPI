@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Model Box</title>
+
+</head>
+  <body>
+    <h1>Modelo em Caixa - Model Box HTML</h1>
+
+    <p>Os elementos HTML são estruturados em um moelo denominado "Modelbox", que refere-se a característica de um elemento por conter outros elementos, cada um possuindo uma etrutura interna, similar a ideia de uma caixa dentro da outra</p>
+
+    <strong><h2>Estrutura de um elemento HTML</h2></strong> 
+    <p>Todos os elementos HTML possuem conteúdo, padding, borda e offset. <br>
+    Sendo a região de conteúdo estruturada em três camadas:</p>
+    <ol>
+        <li>Background-color</li>
+        <li>Background-image</li>
+        <li>Content</li>
+    </ol>
+
+    <img id="imgModelBox" src="./imagens/modelbox.png"
+                    alt="modelbox">
+
+    <div id="divtexto">Texto</div>
+        <span>texto2</span>
+
+    <style>
+        #divtexto{
+            border: 1px solid red;
+            padding: 20px;
+            margin: 25px;
+            outline: 1px solid rgb(221, 10, 10);
+            outline-offset: 5px;
+            background-color: bisque;
+            background-image: url("./imagens/romulo.png");
+            background-position: 50% 50%;
+
+        }
+    </style>
+  </body>
+</html>
