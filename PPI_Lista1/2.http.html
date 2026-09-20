@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>HTTP Avançado</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+    <body>
+
+    <h1>Protocolo HTTP</h1>
+        <img src="https://simplificandoredes.com/wp-content/uploads/2021/10/Screenshot-from-2021-10-07-14-56-39.png" alt="">
+    <div>
+        <h2>O que é HTTP?</h2>
+        
+        <p>HTTP é um protocolo de comunicação entre cliente e servidor. Ele funciona através de requisições e respostas,
+        sendo a base de toda navegação na internet.</p>
+    </div>
+
+    <div>
+        <h2>Ciclo de Funcionamento</h2>
+        
+        <ul>
+            <li>DNS resolve o endereço</li>
+            <li>TCP cria conexão</li>
+            <li>HTTP envia requisição</li>
+            <li>Servidor responde</li>
+        </ul>
+    </div>
+
+    <div>
+        <h2>Exemplo de Request </h2>
+        <code>
+            POST /login HTTP/1.1 <br>
+            Host: www.site.com <br>
+            Connection: keep-alive <br>
+            Content-Length: 35 <br>
+            Cache-Control: no-cache <br>
+            User-Agent: Mozilla/5.0 (Windows NT 10.0) <br>
+            Content-Type: application/x-www-form-urlencoded <br>
+            Accept: text/html,application/json <br>
+            Origin: https://www.site.com <br>
+            <br>
+            usuario=eduarda&senha=123456 <br>
+        </code>
+    </div>
+
+    <div>
+        <h2>Exemplo de Response </h2>
+        <code>
+        HTTP/1.1 200 OK <br>
+        Date: Mon, 20 Sep 2026 18:00:00 GMT <br>
+        Server: Apache/2.4.1 <br>
+        Content-Type: text/html; charset=UTF-8 <br>
+        Content-Length: 98 <br>
+        Set-Cookie: sessionId=abc123 <br>
+        Cache-Control: no-cache <br>
+        <br>
+            &lt;html&gt; <br>
+                &lt;body&gt; <br>
+                    &lt;h1&gt;Login realizado com sucesso! &lt;h1&gt; <br>
+                &lt;/body&gt; <br>
+            &lt;/html&gt; <br>
+        </code>
+    </div>
+        <hr>
+    <div>
+        <img src="https://simplificandoredes.com/wp-content/uploads/2021/10/Screenshot-from-2021-10-07-15-14-04-1024x513.png" alt="">
+        <h2>Métodos HTTP</h2>
+        
+        <ul>
+            <li>GET → Buscar dados</li>
+            <li>POST → Enviar dados</li>
+            <li>PUT → Atualizar</li>
+            <li>DELETE → Remover</li>
+        </ul>
+    </div>
+
+    <div>
+        <h2>Status HTTP</h2>
+        <ul>
+            <li>200 → OK</li>
+            <li>404 → Não encontrado</li>
+            <li>500 → Erro no servidor</li>
+        </ul>
+    </div>
+
+</body>
+</html>
