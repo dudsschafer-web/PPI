@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<head>   
+   <title>Especificidade de seletores</title>
+   <style>
+      /*regra 1*/ li{color:red;}
+      /*regra 2*/ .churras{color:green;}
+      /*regra 3*/ .fruta{color:gray}
+      /*regra 4*/ li+li.churras{color: black;}
+      /*regra 5*/ .churras[draggable="true"]{color: magenta;}
+      /*regra 6*/ #lip1,#lip2,#lip3{color:blue}
+      /*regra 7*/ #lip3.fruta{color:orange}
+      /*regra 8*/ ol>li.churras#lip5{color:purple}
+   </style>
+</head>
+<body>   
+   <!--<ol>-->
+   <!--item 1 <li id="lip0">Abacaxi</li>-->
+   <!--item 2 <li           class="fruta">Melão</li>-->
+   <!--item 3 <li id="lip2" class="fruta">Pera</li>-->
+   <!--item 4 <li id="lip3" class="fruta">Uva</li>-->
+   <!--item 5 <li id="lip4" class="fruta">Maçã</li>-->
+   <!--item 6 <li           class="churras">Carne</li>-->
+   <!--item 7 <li           class="churras">Linguiça</li>-->
+   <!--item 8 <li id="lip7" class="churras" draggable="true">Pão de alho</li>-->
+   <!--</ol>-->
+
+   <h1>Especifidade Seletores</h1>
+   
+    <h2>Código</h2>
+    <img src="../img/Codigo.png" alt="Código CSS" width="300">
+
+    <h2>Saída de Código:</h2>
+    <img src="../img/SaidaDeCodigo.png" alt="Resultado do código" width="200">
+
+    <h2>Como funciona:</h2>
+
+    <dl>
+        <dt><code><strong>li{color:red;}</strong></code></dt>
+            <dd>| Define a cor de todos os elementos "li" para vermelho</dd> <br>
+
+        <dt><code><strong>.churras{color:green;}</strong></code></dt>
+            <dd>| Define a cor de todos os elementos da classe "churras" para verde</dd> <br>
+
+        <dt><code><strong>.fruta{color:gray}</strong></code></dt>
+            <dd>| Define a cor de todos os elementos da classe "fruta" para cinza</dd> <br>
+
+        <dt><code><strong>li+li.churras{color: black;}</strong></code></dt>
+            <dd>| Define a cor de todos os elementos "li" que seguem elementos da classe "churras" para preto</dd> <br>
+        
+        <dt><code><strong>.churras[draggable="true"]{color: magenta;}</strong></code></dt>
+            <dd>| Define a cor de todos os elementos da classe "churras" com o atributo "draggable=true" para magenta</dd> <br>
+
+        <dt><code><strong>#lip1,#lip2,#lip3{color:blue}</strong></code></dt>
+            <dd>| Define a cor de todos os elementos com ID = "lip1", "lip2" ou "lip3" para azul</dd> <br>
+        
+        <dt><code><strong>#lip3.fruta{color:orange}</strong></code></dt>
+            <dd>| Define a cor do elemento de classe "fruta" e ID = "lip3" para laranja</dd> <br>
+        
+        <dt><code><strong>ol>li.churras#lip5{color:purple}</strong></code></dt>
+            <dd>| Define a cor do elemento de classe "churras" e ID = "lip5" dentro de um elemento "ol" para roxo</dd> <br>
+
+    </dl>
+
+        <h2>Por que cada regra foi aplicada?</h2>
+
+    <dl>
+        <dt><strong>Item 1 - Abacaxi (Vermelho)</strong></dt>
+        <dd>| Recebe a regra 1, por ser um elemento "li" e não possuir
+        nenhuma classe ou ID que corresponda às outras regras.</dd><br>
+
+        <dt><strong>Item 2 - Melão (Cinza)</strong></dt>
+        <dd>| Recebe a regra 3, por ser da classe "fruta", que tem uma
+        especificidade maior que a regra geral aplicada aos elementos "li".</dd><br>
+
+        <dt><strong>Item 3 - Pera (Azul)</strong></dt>
+        <dd>| Recebe a regra 6, por ter ID = "lip2". Seletores de ID
+        possuem maior especificidade que seletores de classe, prevalecendo
+        sobre a regra 3.</dd><br>
+
+        <dt><strong>Item 4 - Uva (Laranja)</strong></dt>
+        <dd>| Recebe a regra 7, por ter ID = "lip3" e classe = "fruta".
+        A combinação dos dois seletores tem uma especificidade maior
+        que a regra 6, que utiliza apenas o ID.</dd><br>
+
+        <dt><strong>Item 5 - Maçã (Cinza)</strong></dt>
+        <dd>| Recebe a regra 3, por ser da classe "fruta".
+        Essa regra domina a regra 1 por ter uma maior
+        especificidade.</dd><br>
+
+        <dt><strong>Item 6 - Carne (Verde)</strong></dt>
+        <dd>| Recebe a regra 2, por ser da classe "churras".
+        A regra 4 não se aplica, já que o elemento anterior não
+        pertence à classe "churras".</dd><br>
+
+        <dt><strong>Item 7 - Linguiça (Preto)</strong></dt>
+        <dd>| Recebe a regra 4, por ser um elemento "li" com classe
+        "churras" que aparece imediatamente depois de outro "li".
+        Essa regra tem uma especificidade maior que a regra 2.</dd><br>
+
+        <dt><strong>Item 8 - Pão de alho (Magenta)</strong></dt>
+        <dd>| Recebe a regra 5, por ser da classe "churras" e ter o
+        atributo draggable="true". Essa combinação tem uma especifidade maior
+        que as regras 2 e 4.</dd><br>
+    </dl>
+
+</body>
+</html>

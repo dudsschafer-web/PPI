@@ -1,0 +1,206 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Barquinho no Mar</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            overflow: hidden;
+        }
+
+        /* Cenário */
+        .cenario {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            overflow: hidden;
+            background: linear-gradient(
+                #75caff,
+                #c5ecff
+            );
+        }
+
+        /* Sol */
+        .sol {
+            position: absolute;
+            top: 60px;
+            right: 120px;
+            width: 100px;
+            height: 100px;
+            background-color: #ffeb3b;
+            border-radius: 50%;
+            box-shadow: 0 0 40px #fff176;
+        }
+
+        /* Nuvem */
+        .nuvem {
+            position: absolute;
+            top: 100px;
+            left: -200px;
+            width: 130px;
+            height: 45px;
+            background-color: white;
+            border-radius: 50px;
+
+            box-shadow:
+                25px -25px 0 5px white,
+                65px -15px 0 10px white,
+                90px 0 0 0 white;
+
+            animation: moverNuvem 18s linear infinite;
+        }
+
+        /* Movimento da nuvem */
+        @keyframes moverNuvem {
+            0% {
+                left: -200px;
+            }
+
+            100% {
+                left: 110%;
+            }
+        }
+
+        /* Mar */
+        .mar {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            height: 40%;
+            background: linear-gradient(
+                #0099dd,
+                #005b99
+            );
+            overflow: hidden;
+        }
+
+        /* Primeira camada de ondas */
+        .mar::before {
+            content: "";
+            position: absolute;
+            top: -20px;
+            left: -50%;
+            width: 200%;
+            height: 60px;
+
+            background: radial-gradient(
+                ellipse,
+                #80deea 45%,
+                transparent 50%
+            );
+
+            background-size: 100px 50px;
+
+            animation: ondas 4s linear infinite;
+        }
+
+        /* Segunda camada de ondas */
+        .mar::after {
+            content: "";
+            position: absolute;
+            top: 25px;
+            left: -50%;
+            width: 200%;
+            height: 60px;
+
+            background: radial-gradient(
+                ellipse,
+                #4fc3f7 40%,
+                transparent 50%
+            );
+
+            background-size: 120px 50px;
+
+            animation: ondas 6s linear infinite reverse;
+        }
+
+        /* Movimento das ondas */
+        @keyframes ondas {
+            0% {
+                transform: translateX(0);
+            }
+
+            100% {
+                transform: translateX(100px);
+            }
+        }
+
+        /* Movimento horizontal do barco */
+        .movimentoBarco {
+            position: absolute;
+            bottom: 34%;
+            left: -180px;
+            z-index: 3;
+
+            animation: navegar 14s linear infinite;
+        }
+
+        @keyframes navegar {
+            0% {
+                left: -180px;
+            }
+
+            100% {
+                left: 110%;
+            }
+        }
+
+        /* Barquinho */
+        .barco {
+            width: 150px;
+            height: 130px;
+
+            background-image: url("../img/barquinho.png");
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
+
+            animation: balancar 2s ease-in-out infinite alternate;
+        }
+
+        /* Balanço do barco */
+        @keyframes balancar {
+            0% {
+                transform: rotate(-5deg) translateY(0);
+            }
+
+            100% {
+                transform: rotate(5deg) translateY(8px);
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <div class="cenario">
+
+        <!-- Sol -->
+        <div class="sol"></div>
+
+        <!-- Nuvem -->
+        <div class="nuvem"></div>
+
+        <!-- Barquinho -->
+        <div class="movimentoBarco">
+            <div class="barco"></div>
+        </div>
+
+        <!-- Mar -->
+        <div class="mar"></div>
+
+    </div>
+
+</body>
+</html>

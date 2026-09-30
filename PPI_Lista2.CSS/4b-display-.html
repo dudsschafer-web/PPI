@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Display Inline Block</title>
+
+    <style>
+        .container {
+            display: flex;
+        }
+
+        div div {
+            width: 25%;
+            height: 50px;
+            text-align: center;
+        }
+
+        #div1 {
+            background-color: #6600ff;
+        }
+
+        #div2 {
+            background-color: green;
+        }
+
+        #div3 {
+            background-color: red;
+        }
+
+        #div4 {
+            background-color: yellow;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <div id="div1">1</div>
+        <div id="div2">2</div>
+        <div id="div3">3</div>
+        <div id="div4">4</div>
+    </div>
+
+    <h1>Por que a exibição fica assim?</h1>
+    <h2>A propriedade display: flex organiza os elementos filhos lado a lado, em uma mesma linha. <br>
+        Como cada bloco possui uma largura de 25%, os quatro elementos dividem igualmente o espaço disponível,  <br>
+        formando uma sequência horizontal.</h2>
+</body>
+</html>

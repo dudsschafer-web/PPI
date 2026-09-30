@@ -1,0 +1,206 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil Profissional</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            color: #333;
+        }
+
+        /* Estrutura principal */
+        .container {
+            display: flex;
+            width: 100%;
+            min-height: 100vh;
+        }
+
+        /* Barra lateral */
+        .lateral {
+            background-color: #3d4650;
+            color: white;
+            width: 27%;
+            padding: 20px;
+        }
+
+        .foto {
+            width: 160px;
+            height: 160px;
+            border-radius: 50%;
+            object-fit: cover;
+            display: block;
+            margin: 0 auto 25px;
+        }
+
+        .lateral h3 {
+            font-size: 17px;
+            margin-bottom: 15px;
+            border-bottom: 2px solid #aaa;
+            padding-bottom: 15px;
+        }
+
+        .lateral p {
+            font-size: 13px;
+            line-height: 1.5;
+            margin-bottom: 12px;
+        }
+
+        /* Conteúdo principal */
+        .conteudo {
+            width: 73%;
+            padding: 25px;
+        }
+
+        h1 {
+            font-size: 32px;
+            margin-bottom: 18px;
+        }
+
+        hr {
+            border: none;
+            border-top: 2px solid #ddd;
+            margin-bottom: 20px;
+        }
+
+        .resumo {
+            font-size: 14px;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            font-size: 18px;
+            margin-bottom: 15px;
+        }
+
+        /* Experiências */
+        .experiencia {
+            margin-bottom: 25px;
+        }
+
+        .cargo {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 5px;
+        }
+
+        .cargo h3 {
+            font-size: 15px;
+        }
+
+        .cargo span {
+            font-size: 13px;
+        }
+
+        .local {
+            font-size: 14px;
+            font-style: italic;
+            margin-bottom: 8px;
+        }
+
+        ul {
+            margin-left: 18px;
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <!-- Barra lateral -->
+        <aside class="lateral">
+
+            <img src="../img/romuloBeninca.jpg"
+                 alt="Foto de perfil"
+                 class="foto">
+
+            <h3>Pessoal</h3>
+
+            <p>
+                <strong>Nome</strong><br>
+                Romulo de Aguiar Beninca
+            </p>
+
+            <p>
+                <strong>Endereço</strong><br>
+                Rua da Paz, 250<br>
+                7100-011 Lisboa
+            </p>
+
+            <p>
+                <strong>Número de telefone</strong><br>
+                9630002121
+            </p>
+
+            <p>
+                <strong>Email</strong><br>
+                romulo.beninca@ifsc.edu.br
+            </p>
+
+            <h3>Interesses</h3>
+
+            <p>
+                Programação para Internet<br>
+                Programação para Dispositivos Móveis <br>
+                Tecnologia<br>
+                Comunicação<br>
+                Confecção de foguetes <br>
+                
+            </p>
+
+        </aside>
+
+        <main class="conteudo">
+
+            <h1>Romulo de Aguiar Beninca</h1>
+            <hr>
+
+            <p class="resumo">
+                Um professor de programação com sentido de missão e com
+                mais de infinitos anos de experiência em ensinar. <br>
+                Sou um especialista
+                em programação, códigos HTML, JAVA, CSS, Javascript, entre outros. <br>
+                Tenho uma comunicação exemplar, aptidões
+                interpessoais e trabalho bem sob pressão
+                de forma a atingir os objetivos.
+            </p>
+
+            <h2>Experiência profissional</h2>
+
+            <div class="experiencia">
+
+                <div class="cargo">
+                    <h3>Docente em curso Técnico em informática e em curso Superior em Analise e desenvolvimento de sistemas</h3>
+                    <span>2015 - 2026</span>
+                </div>
+
+                <p class="local">Insituto Federal De Santa Catarina - Campus Gaspar</p>
+
+                <ul>
+                    <li>Pesquisa em Tecnologias da Informação</li>
+                    <li>Comunicação com projetos relacionados a automação e arquitetura de computadores.</li>
+                </ul>
+
+            </div>
+
+        </main>
+
+    </div>
+
+</body>
+</html>
