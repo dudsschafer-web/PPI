@@ -1,0 +1,200 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explorando o Flexbox Froggy</title>
+    <link rel="stylesheet" href="style1.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>Explorando o Flexbox Froggy</h1>
+        <p>Lista de atividades práticas - CSS Flexbox</p>
+    </header>
+
+    <main>
+
+        <section class="introducao">
+
+            <h2>Conhecendo o jogo</h2>
+
+            <p>
+                O Flexbox Froggy é uma plataforma interativa
+                voltada ao aprendizado de CSS Flexbox. Ao longo
+                de 24 desafios, o jogador deve utilizar diferentes
+                propriedades de posicionamento para conduzir os
+                sapos até as vitórias-régias correspondentes.
+            </p>
+
+            <p>
+                A proposta da atividade foi explorar os recursos
+                de alinhamento, distribuição e organização de
+                elementos, selecionando dois desafios para
+                apresentar e explicar as soluções utilizadas.
+            </p>
+
+        </section>
+
+        <section class="desafio">
+
+            <h2>Desafio 01 | Nível 13</h2>
+
+            <h3>O que precisava ser feito?</h3>
+
+            <p>
+                Neste nível, os sapos precisam ser reorganizados
+                para alcançar suas respectivas vitórias-régias.
+                Para isso, é necessário modificar a direção
+                dos elementos e ajustar seu alinhamento dentro
+                do lago.
+            </p>
+
+            <img src="img/fase13.antes.png" alt="Situação inicial do nível 13">
+
+            <h3>CSS utilizado</h3>
+
+            <pre><code>
+            #pond { 
+                display: flex;
+                flex-direction: row-reverse;
+                justify-content: center;
+                align-items: flex-end;
+            }
+            </code></pre>
+
+            <h3>Entendendo as propriedades</h3>
+
+            <p>
+                A primeira alteração ocorre com
+                <code>flex-direction: row-reverse</code>,
+                responsável por inverter a ordem horizontal
+                dos elementos. Dessa maneira, os sapos passam
+                a ser distribuídos da direita para a esquerda.
+            </p>
+
+            <p>
+                Em seguida, a propriedade
+                <code>justify-content: center</code>
+                concentra os elementos no centro do eixo
+                principal, mantendo o agrupamento horizontal.
+            </p>
+
+            <p>
+                Por último, <code>align-items: flex-end</code>
+                desloca os sapos para a extremidade inferior
+                do eixo transversal, completando o
+                posicionamento necessário.
+            </p>
+
+            <h3>Resultado obtido</h3>
+
+            <img src="img/fase13Resolvida.png"
+                 alt="Resultado do nível 13">
+
+        </section>
+
+        <section class="desafio">
+
+            <h2>Desafio 02 | Nível 14</h2>
+
+            <h3>O que precisava ser feito?</h3>
+
+            <p>
+                Diferentemente do desafio anterior, o nível 14
+                trabalha com a ordem individual dos elementos.
+                O objetivo é alterar a posição de um sapo
+                sem modificar diretamente a organização
+                dos demais.
+            </p>
+
+            <img src="img/fase14antes.png"
+                 alt="Situação inicial do nível 14">
+
+            <h3>CSS utilizado</h3>
+
+            <pre><code>
+                .yellow { 
+                    order: 1; 
+                }
+            </code></pre>
+
+            <h3>Entendendo a propriedade</h3>
+
+            <p>
+                A propriedade <code>order</code> determina a
+                posição visual de um elemento dentro de um
+                container Flexbox.
+            </p>
+
+            <p>
+                Inicialmente, todos os elementos possuem
+                o valor padrão 0. Ao atribuir o valor 1
+                ao sapo amarelo, ele passa a ser exibido
+                depois dos outros sapos, que continuam
+                com seus valores originais.
+            </p>
+
+            <p>
+                Portanto, não foi necessário alterar o HTML
+                ou modificar a posição individual dos demais
+                elementos, apenas estabelecer uma nova
+                ordem para o sapo selecionado.
+            </p>
+
+            <h3>Resultado obtido</h3>
+
+            <img src="img/fase14Resolvida.png"
+                 alt="Resultado do nível 14">
+
+        </section>
+
+        <section class="conclusao">
+
+            <h2>Considerações finais</h2>
+
+            <p>
+                Os desafios apresentados demonstram duas
+                possibilidades de utilização do Flexbox.
+                Enquanto o nível 13 exige a combinação de
+                propriedades para controlar direção e
+                alinhamento, o nível 14 permite compreender
+                como modificar a ordem visual de um elemento
+                específico.
+            </p>
+
+            <p>
+                A realização dos exercícios contribui para
+                compreender como o CSS pode organizar
+                componentes de uma página sem depender
+                de posicionamentos manuais.
+            </p>
+
+        </section>
+
+        <section class="referencias">
+
+            <h2>Referências</h2>
+
+            <p>
+                PARK, Thomas. Flexbox Froggy.
+                Disponível em:
+                <a href="https://flexboxfroggy.com/#pt-br"
+                   target="_blank">
+                    flexboxfroggy.com
+                </a>.
+            </p>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <p>Prática de Desenvolvimento Web | CSS Flexbox</p>
+    </footer>
+
+</body>
+</html>

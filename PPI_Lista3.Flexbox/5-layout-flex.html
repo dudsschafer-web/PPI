@@ -1,0 +1,126 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estrutura de Página com Flexbox</title>
+    <link rel="stylesheet" href="style5.css">
+    
+    <style>
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: Arial, Helvetica, sans-serif;
+        background-color: #ffffff;
+    }
+
+    .estrutura {
+        display: flex;
+        flex-direction: column;
+
+        width: 100%;
+        min-height: 100vh;
+    }
+
+    .topo {
+        background-color: #9acd32;
+
+        min-height: 90px;
+        padding: 20px;
+
+        display: flex;
+        align-items: flex-start;
+    }
+
+    .conteudoPrincipal {
+        display: flex;
+        flex-direction: row;
+
+        flex-grow: 1;
+        min-height: 350px;
+    }
+
+    .artigo {
+        background-color: #f8fff5;
+
+        flex: 3;
+        padding: 20px;
+    }
+
+    .lateral {
+        background-color: #fffde6;
+
+        flex: 1;
+        padding: 20px;
+    }
+
+    .navegacao {
+        background-color: #d9eee0;
+
+        flex: 1;
+        padding: 20px;
+    }
+
+    .rodape {
+        background-color: #9acd32;
+
+        min-height: 90px;
+        padding: 20px;
+
+        display: flex;
+        align-items: flex-start;
+    }
+
+    @media screen and (max-width: 600px) {
+
+        .conteudoPrincipal {
+            flex-direction: column;
+        }
+
+        .artigo,
+        .lateral,
+        .navegacao {
+            flex: auto;
+            min-height: 120px;
+        }
+
+        .topo,
+        .rodape {
+            min-height: 75px;
+        }
+    }
+
+    </style>
+</head>
+
+<body>
+
+    <div class="estrutura">
+
+        <header class="topo">
+            Header
+        </header>
+
+        <main class="conteudoPrincipal">
+
+            <article class="artigo">Article</article>
+
+            <aside class="lateral">Aside</aside>
+
+            <nav class="navegacao">Nav</nav>
+
+        </main>
+
+        <footer class="rodape">Footer</footer>
+
+    </div>
+
+</body>
+</html>

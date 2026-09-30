@@ -1,0 +1,189 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 6 - Organização com CSS Grid</title>
+    <link rel="stylesheet" href="style6.css">
+
+    <style>
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        min-height: 100vh;
+        background-color: #ffffff;
+
+        display: grid;
+        place-items: center;
+
+        padding: 20px;
+    }
+
+    .mosaico {
+        display: grid;
+
+        width: 100%;
+        max-width: 850px;
+        height: 450px;
+
+        padding: 8px;
+        gap: 8px;
+
+        background-color: #eeeeee;
+
+        grid-template-columns: 1.4fr 1fr 1fr 65px;
+
+        grid-template-rows: repeat(3, 1fr);
+
+        grid-template-areas:
+            "destaque rosado claro claro"
+            "azulado rosado verde decoracao"
+            "amarelo amarelo verde decoracao";
+    }
+
+    .peca {
+        width: 100%;
+        height: 100%;
+    }
+
+    .destaque {
+        grid-area: destaque;
+        background-color: #f4a340;
+    }
+
+    .blocoAzulado {
+        grid-area: azulado;
+        background-color: #a8c5e2;
+    }
+
+    .blocoClaro {
+        grid-area: claro;
+        background-color: #c9e5e9;
+    }
+
+    .blocoRosado {
+        grid-area: rosado;
+        background-color: #eeb09d;
+    }
+
+    .blocoAmarelo {
+        grid-area: amarelo;
+        background-color: #f3bd4d;
+    }
+
+    .blocoVerde {
+        grid-area: verde;
+        background-color: #a9c47b;
+    }
+
+    .areaDecorativa {
+        grid-area: decoracao;
+
+        background-color: #ffffff;
+
+        display: grid;
+        grid-template-rows: repeat(4, 1fr);
+
+        justify-items: center;
+        align-items: center;
+    }
+
+    .ponto {
+        display: block;
+
+        width: 28px;
+        height: 28px;
+
+        border-radius: 50%;
+    }
+
+    .primeiro {
+        background-color: #e6a182;
+    }
+
+    .segundo {
+        background-color: #c6a7b3;
+    }
+
+    .terceiro {
+        background-color: #b1c98f;
+    }
+
+    .quarto {
+        background-color: #c0b1df;
+    }
+
+    @media screen and (max-width: 599px) {
+
+        body {
+            padding: 12px;
+            place-items: start stretch;
+        }
+
+        .mosaico {
+            height: auto;
+
+            grid-template-columns: 1fr;
+
+            grid-template-rows: repeat(6, 110px) 85px;
+
+            grid-template-areas:
+                "destaque"
+                "azulado"
+                "claro"
+                "rosado"
+                "amarelo"
+                "verde"
+                "decoracao";
+        }
+
+        .areaDecorativa {
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: 1fr;
+        }
+
+    }
+
+    </style>
+</head>
+
+<body>
+
+    <main class="mosaico">
+
+        <section class="peca destaque"></section>
+
+        <section class="peca blocoAzulado"></section>
+
+        <section class="peca blocoClaro"></section>
+
+        <section class="peca blocoRosado"></section>
+
+        <section class="peca blocoAmarelo"></section>
+
+        <section class="peca blocoVerde"></section>
+
+    <aside class="areaDecorativa">
+
+            <span class="ponto primeiro"></span>
+
+            <span class="ponto segundo"></span>
+
+            <span class="ponto terceiro"></span>
+
+            <span class="ponto quarto"></span>
+
+    </aside>
+
+    </main>
+
+</body>
+
+</html>

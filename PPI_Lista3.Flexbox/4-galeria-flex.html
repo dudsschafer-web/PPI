@@ -1,0 +1,272 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galeria de Paisagens</title>
+    <link rel="stylesheet" href="style4.css">
+
+    <style>
+        
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        min-height: 100vh;
+        background-color: #f5f5f5;
+        font-family: Arial, sans-serif;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .galeria {
+        display: flex;
+        flex-direction: row;
+
+        width: 85%;
+        max-width: 1000px;
+        height: 420px;
+
+        gap: 12px;
+    }
+
+    .paisagem {
+        position: relative;
+
+        flex: 1;
+        min-width: 0;
+        height: 100%;
+
+        overflow: hidden;
+        border-radius: 40px;
+
+        cursor: pointer;
+        transition: flex 0.6s ease-in-out;
+    }
+
+    .paisagem img {
+        width: 100%;
+        height: 100%;
+
+        object-fit: cover;
+        display: block;
+    }
+
+    .paisagem::after {
+        content: "";
+
+        position: absolute;
+        bottom: 0;
+        left: 0;
+
+        width: 100%;
+        height: 45%;
+
+        background: linear-gradient(
+            transparent,
+            rgba(0, 0, 0, 0.65)
+        );
+
+        pointer-events: none;
+    }
+
+    .paisagem.selecionada {
+        flex: 6;
+    }
+
+    .detalhes {
+        position: absolute;
+        bottom: 18px;
+        left: 12px;
+
+        display: flex;
+        align-items: center;
+        gap: 12px;
+
+        z-index: 2;
+    }
+
+    .simbolo {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        width: 38px;
+        height: 38px;
+
+        flex-shrink: 0;
+
+        background-color: white;
+        border-radius: 50%;
+
+        font-size: 17px;
+    }
+
+    .legenda {
+        color: white;
+
+        opacity: 0;
+        visibility: hidden;
+
+        white-space: nowrap;
+
+        transition: opacity 0.3s ease;
+    }
+
+    .legenda h2 {
+        font-size: 17px;
+        margin-bottom: 4px;
+    }
+
+    .legenda p {
+        font-size: 12px;
+        color: #dddddd;
+    }
+
+    .selecionada .legenda {
+        opacity: 1;
+        visibility: visible;
+        transition-delay: 0.3s;
+    }
+
+    @media (max-width: 600px) {
+
+        .galeria {
+            width: 95%;
+            height: 350px;
+            gap: 6px;
+        }
+
+        .paisagem {
+            border-radius: 25px;
+        }
+
+        .paisagem.selecionada {
+            flex: 7;
+        }
+
+        .simbolo {
+            width: 28px;
+            height: 28px;
+            font-size: 12px;
+        }
+
+        .legenda h2 {
+            font-size: 13px;
+        }
+
+        .legenda p {
+            font-size: 10px;
+        }
+    }
+
+    </style>
+</head>
+
+<body>
+
+    <main class="galeria">
+
+        <section class="paisagem selecionada">
+            <img src="https://media.istockphoto.com/id/486309106/pt/foto/noite-vista-da-montanha-ama-dablam.jpg?s=612x612&w=0&k=20&c=wFfEICqDGng4jyStBJGvKqwF8TpHY5ZATsBWKGQdFe0="
+                 alt="Montanhas">
+
+            <div class="detalhes">
+                <span class="simbolo">⛰️</span>
+
+                <div class="legenda">
+                    <h2>Montanhas</h2>
+                    <p>Explorando novos horizontes</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="paisagem">
+            <img src="https://thumbs.dreamstime.com/b/paisagem-bonita-com-rio-e-canoa-nela-87811158.jpg"
+                 alt="Rios">
+
+            <div class="detalhes">
+                <span class="simbolo">🌊</span>
+
+                <div class="legenda">
+                    <h2>Rios</h2>
+                    <p>O movimento das águas</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="paisagem">
+            <img src="https://thumbs.dreamstime.com/b/paisagem-floresta-longa-bonita-das-%C3%A1rvores-da-borracha-da-perspectiva-86293613.jpg"
+                 alt="Florestas">
+
+            <div class="detalhes">
+                <span class="simbolo">🌲</span>
+
+                <div class="legenda">
+                    <h2>Florestas</h2>
+                    <p>Um refúgio na natureza</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="paisagem">
+            <img src="https://media.istockphoto.com/id/483724081/pt/foto/vale-yosemite-paisagem-e-rio-calif%C3%B3rnia.jpg?s=612x612&w=0&k=20&c=_HT5cKpVLbBSnNJ-GUJePUoEqHbnJkuAm0EIzw7bZ1w="
+                 alt="Natureza">
+
+            <div class="detalhes">
+                <span class="simbolo">🍃</span>
+
+                <div class="legenda">
+                    <h2>Natureza</h2>
+                    <p>Belezas ao ar livre</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="paisagem">
+            <img src="https://img.magnific.com/fotos-gratis/belas-paisagens-de-inverno-com-uma-cerca-de-madeira-e-arvores-densas_181624-42364.jpg"
+                 alt="Inverno">
+
+            <div class="detalhes">
+                <span class="simbolo">❄️</span>
+
+                <div class="legenda">
+                    <h2>Inverno</h2>
+                    <p>Paisagens e temperaturas frias</p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <script>
+
+        const paisagens = document.querySelectorAll(".paisagem");
+
+        // Adiciona o clique
+        paisagens.forEach(function(paisagem) {
+
+            paisagem.addEventListener("click", function() {
+
+                paisagens.forEach(function(item) {
+                    item.classList.remove("selecionada");
+                });
+
+                // Expande a paisagem
+                paisagem.classList.add("selecionada");
+
+            });
+
+        });
+
+    </script>
+
+</body>
+</html>
