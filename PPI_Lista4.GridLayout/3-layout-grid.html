@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 3 - Grid</title>
+    <link rel="stylesheet" href="style3.css">
+
+    <style>
+        
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        min-height: 100vh;
+
+        display: grid;
+        place-items: center;
+
+        font-family: Georgia, serif;
+        background-color: white;
+    }
+
+    .gradePrincipal {
+        width: 80%;
+        min-height: 80vh;
+
+        display: grid;
+
+        grid-template-columns: 1fr 1.4fr 0.65fr;
+        grid-template-rows: 1fr 2fr;
+
+        grid-template-areas:
+            "a vazio b"
+            "c grupo grupo";
+
+        gap: 12px;
+    }
+
+    .item,
+    .grupo {
+        background-color: #444;
+        border-radius: 3px;
+    }
+
+    .item {
+        padding: 20px;
+
+        color: white;
+        font-size: 25px;
+    }
+
+    .itemA {
+        grid-area: a;
+    }
+
+    .itemB {
+        grid-area: b;
+    }
+
+    .itemC {
+        grid-area: c;
+    }
+
+    .grupo {
+        grid-area: grupo;
+
+        padding: 18px;
+
+        display: grid;
+
+        grid-template-columns: 1fr 2fr 1fr;
+        grid-template-rows: repeat(2, 1fr);
+
+        gap: 10px;
+    }
+
+    .grupo div {
+        background-color: #cccccc;
+
+        display: flex;
+        align-items: center;
+
+        padding: 15px;
+
+        font-size: 25px;
+        color: #444;
+    }
+
+    </style>
+</head>
+
+<body>
+
+    <main class="gradePrincipal">
+
+        <section class="item itemA">A</section>
+
+        <section class="item itemB">B</section>
+
+        <section class="item itemC">C</section>
+
+        <section class="grupo">
+
+            <div>E</div>
+            <div>F</div>
+            <div>G</div>
+
+            <div>M</div>
+            <div>I</div>
+            <div>J</div>
+
+        </section>
+
+    </main>
+
+</body>
+
+</html>

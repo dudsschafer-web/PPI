@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 2 - Grid</title>
+    <link rel="stylesheet" href="style2.css">
+
+    <style>
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: Arial, sans-serif;
+    }
+
+    .pagina {
+        min-height: 100vh;
+
+        display: grid;
+
+        grid-template-columns: 25% 75%;
+        grid-template-rows: 90px 1fr 70px;
+
+        grid-template-areas:
+            "header header"
+            "nav content"
+            "nav footer";
+    }
+
+    .cabecalho {
+        grid-area: header;
+
+        background-color: #e83375;
+
+        display: grid;
+        place-items: center;
+
+        font-size: 25px;
+    }
+
+    .menu {
+        grid-area: nav;
+
+        background-color: #b8b982;
+
+        display: grid;
+        place-items: center;
+
+        font-size: 22px;
+    }
+
+    .conteudo {
+        grid-area: content;
+
+        background-color: #e6ad7d;
+        padding: 35px;
+    }
+
+    .conteudo h1 {
+        text-align: center;
+        font-size: 25px;
+        font-weight: normal;
+
+        margin-bottom: 25px;
+    }
+
+    .conteudoInterno {
+        display: grid;
+
+        grid-template-columns: 35% 65%;
+        gap: 20px;
+
+        max-width: 500px;
+        margin: auto;
+    }
+
+    .imagemExemplo {
+        height: 140px;
+        border: 2px solid #333;
+    }
+
+    .textoExemplo {
+        display: grid;
+        gap: 7px;
+    }
+
+    .textoExemplo span {
+        height: 5px;
+        background-color: #333;
+    }
+
+    .rodape {
+        grid-area: footer;
+
+        background-color: #75ad98;
+
+        display: grid;
+        place-items: center;
+
+        font-size: 22px;
+    }
+    
+    </style>
+</head>
+
+<body>
+
+    <div class="pagina">
+
+        <header class="cabecalho">Header</header>
+
+        <nav class="menu">Nav</nav>
+
+        <main class="conteudo">
+
+            <h1>Content</h1>
+
+            <div class="conteudoInterno">
+
+                <div class="imagemExemplo"></div>
+
+                <div class="textoExemplo">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+
+            </div>
+
+        </main>
+
+        <footer class="rodape">Footer</footer>
+
+    </div>
+
+</body>
+
+</html>

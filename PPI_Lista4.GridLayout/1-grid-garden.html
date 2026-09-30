@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 1 - Grid Garden</title>
+    <link rel="stylesheet" href="style1.css">
+    
+</head>
+
+<body>
+
+    <main class="atividade">
+
+        <header>
+            <h1>Grid Garden</h1>
+            <p>Explicação da solução do nível 7</p>
+        </header>
+
+        <section class="explicacao">
+
+            <h2>Nível 7</h2>
+
+            <p>
+                No nível 7, o objetivo é fazer com que a área de água
+                alcance as duas colunas onde estão as cenouras.
+            </p>
+
+            <h3>Antes da solução</h3>
+
+            <img src="img/fase7naoresolvida.png"
+                 alt="Nível 7 do Grid Garden antes de ser resolvido">
+
+            <h3>Código utilizado</h3>
+
+            <div class="codigo">
+                <code>
+                    grid-column-start: 2;<br>
+                    grid-column-end: span 2;
+                </code>
+            </div>
+
+            <p>
+                A propriedade <strong>grid-column-start: 2</strong>
+                determina que a área de água deve começar na segunda
+                linha vertical da grade.
+            </p>
+
+            <p>
+                Já a propriedade
+                <strong>grid-column-end: span 2</strong>
+                utiliza a palavra-chave <strong>span</strong> para indicar
+                quantas colunas o elemento deve ocupar a partir de sua
+                posição inicial.
+            </p>
+
+            <p>
+                Como foi utilizado <strong>span 2</strong>, a área de água
+                ocupa duas colunas. Dessa forma, ela cobre corretamente
+                as duas áreas onde estão as cenouras e completa o nível.
+            </p>
+
+            <h3>Resultado</h3>
+
+            <img src="img/fase7resolvida.png"
+                 alt="Nível 7 do Grid Garden resolvido">
+
+        </section>
+
+    </main>
+
+</body>
+
+</html>

@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conteúdos PPI</title>
+    <link rel="stylesheet" href="style5.css">
+
+    <style>
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        min-height: 100vh;
+
+        display: grid;
+        place-items: center;
+
+        background-color: #f5f5f5;
+        font-family: Arial, sans-serif;
+
+        padding: 20px;
+    }
+
+    .conteudos {
+        width: 850px;
+        max-width: 100%;
+        height: 450px;
+
+        display: grid;
+
+        gap: 7px;
+        padding: 7px;
+
+        background-color: #e7e7e7;
+
+        grid-template-columns:
+            1.3fr 0.9fr 0.9fr 0.25fr;
+
+        grid-template-rows:
+            1fr 0.8fr 0.8fr;
+
+        grid-template-areas:
+            "web animate css css"
+            "html animate flex position"
+            "grid grid flex position";
+    }
+
+    .conteudos a {
+        text-decoration: none;
+        color: #333;
+
+        display: grid;
+        place-items: center;
+
+        font-size: 18px;
+
+        transition:
+            transform 0.2s,
+            opacity 0.2s;
+    }
+
+    .conteudos a:hover {
+        transform: scale(0.97);
+        opacity: 0.85;
+    }
+
+    .web {
+        grid-area: web;
+        background-color: #f5a12b;
+    }
+
+    .html {
+        grid-area: html;
+        background-color: #adc1da;
+    }
+
+    .css {
+        grid-area: css;
+        background-color: #c8dede;
+    }
+
+    .animate {
+        grid-area: animate;
+        background-color: #efad9a;
+    }
+
+    .position {
+        grid-area: position;
+        background-color: #ffffff;
+    }
+
+    .flex {
+        grid-area: flex;
+        background-color: #b8cb69;
+    }
+
+    .grid {
+        grid-area: grid;
+        background-color: #f4b33b;
+    }
+
+    /* Layout para celulares */
+
+@media screen and (max-width: 599px) {
+
+    body {
+        display: block;
+        padding: 15px;
+    }
+
+    .conteudos {
+        width: 100%;
+        height: auto;
+
+        grid-template-columns: 1fr;
+
+        grid-template-rows: repeat(7, 90px);
+
+        grid-template-areas:
+            "web"
+            "html"
+            "css"
+            "animate"
+            "position"
+            "flex"
+            "grid";
+    }
+
+    .conteudos a {
+        width: 100%;
+        font-size: 16px;
+    }
+
+}
+
+    </style>
+</head>
+
+<body>
+
+    <nav class="conteudos">
+
+        <a href="web.html" class="web">
+            <span>WEB</span>
+        </a>
+
+        <a href="html.html" class="html">
+            <span>HTML</span>
+        </a>
+
+        <a href="css.html" class="css">
+            <span>CSS</span>
+        </a>
+
+        <a href="animate.html" class="animate">
+            <span>Animate</span>
+        </a>
+
+        <a href="position.html" class="position">
+            <span>Position</span>
+        </a>
+
+        <a href="flex.html" class="flex">
+            <span>Flex</span>
+        </a>
+
+        <a href="grid.html" class="grid">
+            <span>Grid</span>
+        </a>
+
+    </nav>
+
+</body>
+
+</html>

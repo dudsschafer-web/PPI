@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 4 - Layout Responsivo</title>
+    <link rel="stylesheet" href="style4.css">
+
+    <style>
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        min-height: 100vh;
+
+        font-family: Arial, sans-serif;
+
+        display: flex;
+        justify-content: center;
+
+        padding: 20px;
+    }
+
+    .layout {
+        width: 100%;
+        min-height: 100vh;
+
+        display: grid;
+
+        gap: 8px;
+
+        grid-template-columns: 170px 1fr 170px;
+
+        grid-template-rows:
+            70px
+            55px
+            1fr
+            55px
+            60px;
+
+        grid-template-areas:
+            "header header header"
+            "esquerda banner direita"
+            "esquerda principal direita"
+            "esquerda inferior direita"
+            "footer footer footer";
+    }
+
+    .layout > * {
+        padding: 15px;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        font-weight: bold;
+    }
+
+    .header {
+        grid-area: header;
+        background-color: #f3b800;
+    }
+
+    .banner {
+        grid-area: banner;
+        background-color: #dd493c;
+    }
+
+    .esquerda {
+        grid-area: esquerda;
+        background-color: #0aa85a;
+    }
+
+    .principal {
+        grid-area: principal;
+        background-color: #4285df;
+    }
+
+    .direita {
+        grid-area: direita;
+        background-color: #f3b800;
+    }
+
+    .inferior {
+        grid-area: inferior;
+        background-color: #0aa85a;
+    }
+
+    .footer {
+        grid-area: footer;
+        background-color: #4285df;
+    }
+
+    @media screen and (max-width: 600px) {
+
+        .layout {
+            grid-template-columns: 1fr;
+
+            grid-template-rows:
+                65px
+                55px
+                65px
+                500px
+                65px
+                65px
+                60px;
+
+            grid-template-areas:
+                "header"
+                "banner"
+                "esquerda"
+                "principal"
+                "direita"
+                "inferior"
+                "footer";
+        }
+
+    }
+
+    </style>
+</head>
+
+<body>
+
+    <main class="layout">
+
+        <header class="header">Header</header>
+
+        <section class="banner">Banner</section>
+
+        <aside class="esquerda">Left Aside</aside>
+
+        <article class="principal">Main Content</article>
+
+        <aside class="direita">Right Aside</aside>
+
+        <section class="inferior">Low Content</section>
+
+        <footer class="footer">Footer</footer>
+
+    </main>
+
+</body>
+
+</html>
