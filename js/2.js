@@ -34,4 +34,47 @@ if (imc<18.5) {
     console.log("Peso normal")
 } else if (imc>=25 && imc<30) {
     console.log("Acima do peso")
+} else if (imc>=30 && imc<35) {
+    console.log("Obesidade grau 1")
+} else if (imc>=35 && imc<40) {
+    console.log("Obesidade grau 2")
+} else if (imc>=40) {
+    console.log("Obesidade grau 3")
 }
+
+// switch case estutura de seleção
+
+a = 2
+switch(a) {
+    case 1: console.log("A"); break;
+    case 2: console.log("B"); break;
+    case 3: console.log("C"); break;
+    default: console.log("D");
+}
+
+// switch case com expresão
+
+switch(a) {
+    case a**a1==4: console.log("A"); break;
+    case a==2: console.log("B"); break;
+    case 3==3: console.log("C"); break;
+    default: console.log("D");
+}
+
+// Estrutura de repetição while
+
+let i = 0;
+while(i<5) {
+    console.log(1);
+    i++;
+}
+
+// for
+
+for (let i=0; i<5; i++) {
+    console.log(i);
+}
+
+// arrays
+
+let frutas = ["picanha", "costela", "alcatra", "fraldinha"];
